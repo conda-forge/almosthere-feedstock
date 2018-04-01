@@ -12,8 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  skip: True  # [py<35]
+  number: 0
   features:
     - vc14  # [win and py36]
 
