@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [py<35 or osx]
+  skip: True  # [py<35]
   features:
     - vc14  # [win and py36]
 
