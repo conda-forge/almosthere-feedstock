@@ -13,8 +13,11 @@ source:
 
 build:
   number: 0
+  skip: true  # [win and py27]
   features:
+    - vc14  # [win and py35]
     - vc14  # [win and py36]
+
 
 requirements:
   build:
@@ -22,8 +25,12 @@ requirements:
     - python  # [win]
     - cmake
     - ncurses 5.9  # [not win]
+    - vc 14  # [win and py35]
+    - vc 14  # [win and py36]
   run:
     - ncurses 5.9  # [not win]
+    - vc 14  # [win and py35]
+    - vc 14  # [win and py36]
 
 test:
   requires:
