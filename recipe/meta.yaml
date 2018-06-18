@@ -13,24 +13,17 @@ source:
 
 build:
   number: 3
-  skip: true  # [win and py27]
-  features:
-    - vc14  # [win and py35]
-    - vc14  # [win and py36]
+  skip: true  # [win and vc<14]
 
 
 requirements:
   build:
-    - toolchain  # [unix]
-    - python     # [win]
     - cmake
+    - {{ compiler('c') }}
+  host:
     - ncurses    # [not win]
-    - vc 14      # [win and py35]
-    - vc 14      # [win and py36]
   run:
     - ncurses  # [not win]
-    - vc 14    # [win and py35]
-    - vc 14    # [win and py36]
 
 test:
   requires:
