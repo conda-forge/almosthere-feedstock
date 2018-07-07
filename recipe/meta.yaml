@@ -1,6 +1,6 @@
 {% set name = "almosthere" %}
-{% set version = "0.0.7" %}
-{% set sha256 = "a8d69d855b9ca363339a0773fa7a5eb51eeadc8946b702696db01e00d32caa53" %}
+{% set version = "0.0.8" %}
+{% set sha256 = "700b4b7647cd9f14f035a2e85e4c857631abfb7eef8b417f5fcd91d59877f9c1" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win and py27]
   features:
     - vc14  # [win and py35]
