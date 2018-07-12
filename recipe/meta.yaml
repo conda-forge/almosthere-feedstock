@@ -1,6 +1,6 @@
 {% set name = "almosthere" %}
-{% set version = "0.0.9" %}
-{% set sha256 = "a201b3de45c9ad92d6d864a2c9faff91df1deb72b6ed9029494cbcb8a6295562" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "8f5a2cd0984460efa7ec522bf93519eab98ea3b6a552c47adaf6818116997a2f" %}
 
 package:
   name: {{ name|lower }}
@@ -13,28 +13,19 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py27]
-  features:
-    - vc14  # [win and py35]
-    - vc14  # [win and py36]
-
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
-    - toolchain  # [unix]
-    - python     # [win]
+    - {{ compiler('c') }}
     - cmake
-    - ncurses    # [not win]
-    - vc 14      # [win and py35]
-    - vc 14      # [win and py36]
+  host:
+    - conda-build
+    - ncurses  # [not win]
   run:
     - ncurses  # [not win]
-    - vc 14    # [win and py35]
-    - vc 14    # [win and py36]
 
 test:
-  requires:
-    - python  # [win]
   commands:
     - test -e $PREFIX/lib/libathr.so                    # [linux]
     - test -e $PREFIX/lib/libathr_static.a              # [linux]
