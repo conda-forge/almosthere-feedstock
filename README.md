@@ -18,7 +18,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/almosthere-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/almosthere-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/almosthere-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/almosthere-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/almosthere-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/almosthere-feedstock/branch/master)
 
 Current release info
 ====================
