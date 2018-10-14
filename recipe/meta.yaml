@@ -1,6 +1,6 @@
 {% set name = "almosthere" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "8f5a2cd0984460efa7ec522bf93519eab98ea3b6a552c47adaf6818116997a2f" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "f9bc5d76370548dcdc5383063fd1896b35c5f64433166f5ea67708bfeb69c832" %}
 
 package:
   name: {{ name|lower }}
