@@ -1,10 +1,10 @@
 c_compiler:
 - vs2015
-ncurses:
-- '6.1'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
 pin_run_as_build:
-  ncurses:
-    max_pin: x.x
   vc:
     max_pin: x
 vc:
