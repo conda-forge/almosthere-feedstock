@@ -1,6 +1,6 @@
 {% set name = "almosthere" %}
-{% set version = "1.0.6" %}
-{% set sha256 = "03d589bfdf96a7d6e0974201a8a17c523d21224ca53359df3a402ea4fff8fdc3" %}
+{% set version = "1.0.7" %}
+{% set sha256 = "2663dcf63cbb0cd0d5f6c790496afc4d4c040f08cbf2b06f20824f676f4bd32d" %}
 
 package:
   name: {{ name|lower }}
@@ -29,14 +29,11 @@ requirements:
 test:
   commands:
     - test -e $PREFIX/lib/libathr.so                    # [linux]
-    - test -e $PREFIX/lib/libathr_static.a              # [linux]
     - test -e $PREFIX/lib/libathr.dylib                 # [osx]
-    - test -e $PREFIX/lib/libathr_static.a              # [osx]
     - conda inspect linkages -p $PREFIX $PKG_NAME       # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME        # [osx]
     - if NOT exist %LIBRARY_PREFIX%/lib/athr.lib exit 1         # [win]
     - if NOT exist %LIBRARY_PREFIX%/bin/athr.dll exit 1         # [win]
-    - if NOT exist %LIBRARY_PREFIX%/lib/athr_static.lib exit 1  # [win]
 
 about:
   home: https://github.com/horta/almosthere
