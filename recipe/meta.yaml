@@ -1,6 +1,6 @@
 {% set name = "almosthere" %}
-{% set version = "1.0.9" %}
-{% set sha256 = "8bd63f01118b93c53d05ccbb29f1fac021162c086370b4a70213b310b819e042" %}
+{% set version = "1.0.11" %}
+{% set sha256 = "e3eaeecd15d4ed5653edc249e3c7b0992b55906a37837d987bec5cfa41c89d96" %}
 
 package:
   name: {{ name|lower }}
@@ -40,7 +40,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Progress indicator C library'
+  summary: Progress indicator C library
   description: |
     ATHR is a simple yet powerfull progress indicator library that works on
     Windows, Linux, and macOS.
