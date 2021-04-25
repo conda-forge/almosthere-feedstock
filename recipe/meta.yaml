@@ -1,6 +1,6 @@
 {% set name = "almosthere" %}
-{% set version = "1.0.15" %}
-{% set sha256 = "2035f80688c84d39bb50c3938d63d2b28ab1ae6d144f28956defbec6501e1ec2" %}
+{% set version = "2.0.1" %}
+{% set sha256 = "debc902791af0d8dc3b69fb72d799aa3bdbfa66d8da55e2e7b2c1cc4279c993d" %}
 
 package:
   name: {{ name|lower }}
@@ -30,8 +30,6 @@ test:
   commands:
     - test -e $PREFIX/lib/libathr.so                    # [linux]
     - test -e $PREFIX/lib/libathr.dylib                 # [osx]
-    - conda inspect linkages -p $PREFIX $PKG_NAME       # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME        # [osx]
     - if NOT exist %LIBRARY_PREFIX%/lib/athr.lib exit 1         # [win]
     - if NOT exist %LIBRARY_PREFIX%/bin/athr.dll exit 1         # [win]
 
