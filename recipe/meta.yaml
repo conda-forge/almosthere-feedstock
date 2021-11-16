@@ -1,6 +1,6 @@
 {% set name = "almosthere" %}
-{% set version = "2.0.2" %}
-{% set sha256 = "b50ff32f5f1aa213589c81118e7312bd5e0f5a3d0a72ace499595a1f0bbff42f" %}
+{% set version = "3.0.3" %}
+{% set sha256 = "81f5a0ef4e30e473c0a4c4fe0c84f5e3cbc30d50a2d395d9400fb10c3dcffed2" %}
 
 package:
   name: {{ name|lower }}
@@ -27,10 +27,11 @@ requirements:
 
 test:
   commands:
-    - test -e $PREFIX/lib/libathr.so                    # [linux]
-    - test -e $PREFIX/lib/libathr.dylib                 # [osx]
-    - if NOT exist %LIBRARY_PREFIX%/lib/athr.lib exit 1         # [win]
-    - if NOT exist %LIBRARY_PREFIX%/bin/athr.dll exit 1         # [win]
+    - test -e $PREFIX/lib/libathr.so                     # [linux]
+    - test -e $PREFIX/lib/libathr.dylib                  # [osx]
+    - test -e $PREFIX/include/athr/athr.h                # [linux]
+    - if NOT exist %LIBRARY_PREFIX%/lib/athr.lib exit 1  # [win]
+    - if NOT exist %LIBRARY_PREFIX%/bin/athr.dll exit 1  # [win]
 
 about:
   home: https://github.com/horta/almosthere
